@@ -134,7 +134,7 @@ body {
           .title { 
               text-align: center;
               color: #282828;
-              margin-top: 2px;
+              margin-top: 20px;
               font-size: 70px;
               font-weight:lighter;
               font-family: 'Noto Sans';
@@ -287,9 +287,9 @@ body {
           }
 
           .section-container {
-                      padding: 50px 100px; /* Espaciado superior e inferior */
-                      margin-bottom: 50px; /* Separación inferior de la sección */
-                      
+                      height: auto;
+                      align-items: center;
+         
           }
 
           .subtitle { 
@@ -315,8 +315,7 @@ body {
                       display: flex; /* Usa flexbox para alinear las imágenes en fila */
                       flex-wrap: wrap; /* Permite que las imágenes se ajusten si no caben en una línea */
                       justify-content: center; /* Centra horizontalmente las imágenes */
-                      gap: 10px; /* Espacio entre imágenes */
-                      padding: 20px 0; /* Espacio superior e inferior */
+                    
                 }
           .image-container img {
                       width: 60%;
@@ -327,14 +326,24 @@ body {
                       flex: 1; /* Asegura que cada imagen tenga el mismo espacio */
                       display: flex;
                       justify-content: center;
+                      align-items: center;
                   }
 
-          .scroll-to-top-button {
+
+.container-4 { 
+  height:auto;
+  background-color: transparent;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  
+}
+
+.scroll-to-top-button {
               display: flex;
               justify-content: center;
               background-color:#6467E3;
               color: white;
-              padding: 30px  ;
+              padding: 40px;
               border-radius: 70px;
               text-decoration: none;
               font-size: 27px;
@@ -343,7 +352,7 @@ body {
               width: 100%; /* Asegura que el botón ocupe el 100% del ancho disponible */
               max-width: 30%;
               margin: 25px auto;
-              margin-bottom: 25px ;
+            
           }
 
           .scroll-to-top-button:hover {
@@ -399,13 +408,14 @@ body {
   .section-container {
                       padding: 300px 100px; /* Espaciado superior e inferior */
                       width: 100%;
-                      height:190%;
+                      height:auto;
+                      padding-bottom: 20px;
   }  
 
   .row { 
-      gap: 10px; /* Espacio entre imágenes */
-      flex-direction: column; /* Cambia la disposición a una sola columna */
-      align-items: center; /* Alinea el contenido en el centro */
+                      gap: 10px; /* Espacio entre imágenes */
+                      flex-direction: column; /* Cambia la disposición a una sola columna */
+                      align-items: center; /* Alinea el contenido en el centro */
   }
 
   .image-container img {
@@ -414,7 +424,7 @@ body {
   }
 
   .subtitle { 
-                      font-size: 15px;
+                      font-size: 25px;
                       font-weight: normal;
 
   }
@@ -423,21 +433,22 @@ body {
                       font-weight: normal;
                       font-size: 25px;
   }
-  .scroll-to-top-button {
-              padding: 15px;
-              border-radius: 30px;
-              font-size: 15px;
-              max-width: 80%;
-              margin: 10px auto;
+  .scroll-to-top-button {        
+                      border-radius: 30px;
+                      font-size: 15px;
+                      max-width: 80%;
+                      margin: 10px auto;
+                      height: 20px;
+                      align-items: center;
   }
   }
 
 
   .section-2-container {
-    padding: 30px 100px; /* Espaciado superior e inferior */
-    margin-bottom: 50px; /* Separación inferior de la sección */ 
+    padding: 30px 10px; /* Espaciado superior e inferior */
+    
     background-color: #14152D;
-    height: 100%;
+    height: auto;
   }
 
   .section-2-container .subtitle { 
@@ -446,11 +457,10 @@ body {
     margin-top: 2px;
     font-size: 40px;
     font-family: 'Noto Sans';
-    font-weight: 100;
+
   } 
 
-  .resaltar-section-2
-  {
+  .resaltar-section-2 {
     color: white;
     font-size: 80px;
     font-weight: 800;
@@ -498,8 +508,11 @@ body {
 
   @media screen and (max-width: 768px) {  
   .section-2-container {
-                      padding: 50px 100px; /* Espaciado superior e inferior */
+                      padding: 50px 50px; /* Espaciado superior e inferior */
                       height: auto;
+
+
+                      
   }  
 
   .row-section-2 { 
@@ -513,7 +526,7 @@ body {
 
 
   .section-2-container .subtitle { 
-    font-size: 15px;
+    font-size: 25px;
     font-weight: normal;
     
 
@@ -540,11 +553,12 @@ body {
 }
 
 .section-3-container {
-    padding: 30px 100px; /* Espaciado superior e inferior */
-    margin-bottom: 50px; /* Separación inferior de la sección */ 
+    padding: 30px ; /* Espaciado superior e inferior */
+    padding-bottom: 30px;
     background-color:#6467E3;
-    height: 100%; 
-    max-height: 1000px;
+    width: 100%;
+    height: 800px;
+    
 }
 
 .row-section-3 {
@@ -553,6 +567,8 @@ body {
       grid-gap: 10px; /* Espacio entre las columnas y filas */
       padding: 20px;  
       padding-top: 10px;
+    
+        
 }
 
 .section-3-container .subtitle { 
@@ -577,9 +593,9 @@ body {
   
 .image-container-3 {
   position: relative;
-  width: 400px; /* Ajusta el ancho según lo necesites */
-  width: 100%;   
- 
+  width: 100%; /* Ajusta el ancho según lo necesites */
+  height: auto;   
+  margin-bottom: 100px; 
 }
 
 
@@ -635,6 +651,8 @@ body {
   opacity: 0; /* Oculta el contenido inicialmente */
   transform: translateY(50px); /* Posiciona el contenido fuera de vista */
   transition: all 0.5s ease-in-out; /* Agrega una transición suave */
+  background-color: rgba(245, 241, 234, 0.5);
+  border-radius: 10px;
 }
 
 .image-container-3 .content p { 
@@ -664,16 +682,16 @@ body {
 /* Responsive Styling: 3RA SECCION: Stands */
   @media screen and (max-width: 768px) {  
   .section-3-container {
-      padding: 20px 30px; /* Espaciado superior e inferior */
+      padding: 10px 10px; /* Espaciado superior e inferior */
       margin-top: 10px; /* Separación inferior de la sección */ 
-      margin-bottom: 10px;
-      background-color: #6467E3;
-      height: 150%; 
-      min-height: 1000px;
+      margin-bottom: 80px;
+      height:150%; 
+     
   }
 
-  .row-section-3 {
+.row-section-3 {
       grid-template-columns: repeat(1, 1fr); /* 3 columnas de igual tamaño */
+      grid-gap: 10px;
    
 }
 
@@ -682,17 +700,16 @@ body {
   height: auto; /* Mantiene la proporción de la imagen */
   opacity: 0.8; /* 50% de opacidad */
   z-index: 1;   
-  margin-top: 10px;
   position: relative;
   display: block;
   transition: transform 0.5s ease;
 }
 
-
-
   .section-3-container .subtitle { 
-      font-size: 15px;
+      font-size: 25px;
       font-weight: normal;
+      margin-top: 20px;
+
 
   } 
   .resaltar-section-3
@@ -703,6 +720,8 @@ body {
 
 .image-container-3 .content h2 { 
   font-size: 20px;
+ 
+  
 }
 
 .image-container-3 .content h3 { 
@@ -718,11 +737,56 @@ body {
 .image-container-3:hover .content h2 {
   transform: translateY(-20px); /* Desliza el h2 hacia arriba */
 }
-
-
-
-
   }
+
+.section-4-container {
+    padding: 30px ; /* Espaciado superior e inferior */
+    padding-bottom: 5px;
+    width: 100%;
+    height: auto;
+    
+}
+
+
+.section-4-container .subtitle { 
+      text-align: center;
+      color:black;
+      font-size: 40px;
+      font-family: 'Noto Sans';
+      font-weight: 100;
+} 
+
+.resaltar-section-4 {
+              color: white;
+              font-size: 80px;
+              font-weight: 80px;
+}
+
+.subtitle {
+      text-align: center;
+    
+}
+
+
+
+
+  @media screen and (max-width: 768px) {  
+  .section-4-container .subtitle { 
+      font-size: 25px;
+      font-weight: normal;
+
+  } 
+  .section-4-container .subtitle h3{
+    font-size: 25px;
+  } 
+
+  .resaltar-section-4
+{
+      font-size: 25px;
+      font-weight: normal;
+  }
+  }
+
 
   /* Estilos para el botón flotante de WhatsApp */
   .whatsapp-button {
@@ -878,14 +942,17 @@ body {
   </div>
 
   </div>
+  <div class="container-4">
   <a href="#top" class="scroll-to-top-button">TRABAJEMOS JUNTOS</a>
+  </div>
 
   <div class="section-2-container">
     <div class="subtitle">
-      <h2><span class="resaltar-section-2">En Lako</span> nos ocupamos de</h2>
+      <h2><span class="resaltar-section-2">En Lako</span> nos ocupamos de...</h2>
     </div>
 
       <div class="row-section-2">
+        
       <div class="image-container-2">
         <img src="02 - Iconos/01 - Gestion.png" alt="">
         <h2>Gestión</h2>
@@ -900,11 +967,12 @@ body {
       </div>
 
       <div class="image-container-2">
-        <img src="02 - Iconos/03 - DiseñoImagen.png" alt=""> 
+        <img src="02 - Iconos/03 - DisenoImagen.png" alt="">
         <h2>Diseño e imagen</h2>
         <p>Nuestro servicio de <strong>diseño e imagen de stands</strong> está pensado para transformar tu espacio de exposición en una experiencia única e inolvidable para tus visitantes. 
           Diseñamos stands que no solo son atractivos, sino también eficientes en su uso del espacio y cómodos para interactuar con tus clientes.</p>
       </div>
+
 
       <div class="image-container-2">
         <img src="02 - Iconos/04 - Iluminacion.png" alt="">
@@ -939,66 +1007,73 @@ body {
   </a>
 
 
-  <div class="section-3-container">
-        <div class="subtitle">
-          <h2><span class="resaltar-section-3">Stands</span> rentables</h2>
-        </div>
-    <div class="row-section-3">
-      <div class="image-container-3">
-        <img src="00 - Fotos principales/Tapa Stand Flair.png" alt="">
-        <div class="overlay"></div>
-        <div class="content">
-              <div class="content">
-                  <span>
-                    <h2>Flair</h2>
-                    <h3> Córdoba</h3>
-                    <p>Diseñamos un stand modular que pudo ser reutilizado con el objetivo
-                      de optimizar la inversión del cliente. En sólo dos días de montaje, logramos
-                      convertir el espacio en un ambiente que reflejaba el propósito de Flair:
-                      comunicar sus servicios al sector alimenticio.
-                    </p>
-                  </span>
-              </div>
-      </div> 
-      
-        <div class="image-container-3">
-          <img src="00 - Fotos principales/Tapa Stand Mobil.jpg" alt="">
-          <div class="overlay"></div>
-          <div class="content">
-            <span>
-              <h2>Mobil</h2>
-              <h3> Neuquén</h3>
-              <p>Nos encargamos de todo el proceso, desde la concepción del proyecto hasta
-                su materialización y logística. En tan solo 3 días logramos mostrar el stand, 
-                creando un espacio que reflejaba la innovación y el compromiso de Mobil con la 
-                industria energética.
-              </p>
-            </span>
-      </div>
-        </div> 
-        <div class="image-container-3">
-          <img src="00 - Fotos principales/Tapa Stand Puro Escabio.png" alt="">
-          <div class="overlay"></div>
-        <div class="content">
-            <span>
-              <h2>Puro Escabio</h2>
-              <h3> Buenos Aires </h3>
-              <p>Utilizamos herramientas de modelado 3D para dar vida a las ideas
-                de Puro Escabio y crea un diseño efectivo. Se cuidó cada detalle, desde la 
-                elección del piso hasta la carpintería y el diseño de la iluminación
-              </p>
-            </span>
-        </div>
-    </div>
-  </div>
-  </div>
+<div class="section-3-container"> 
 
+    <div class="subtitle">
+      <h2><span class="resaltar-section-3">Stands</span> rentables</h2>
+    </div>
+      <div class="row-section-3"> 
+
+        <div class="image-container-3">
+            <img src="00 - Fotos principales/Tapa Stand Flair.png" alt="">
+            <div class="overlay"></div>
+                <div class="content">
+                    <span>
+                      <h2>Flair</h2>
+                      <h3> Córdoba</h3>
+                      <p>Diseñamos un stand modular que pudo ser reutilizado con el objetivo
+                        de optimizar la inversión del cliente. En sólo dos días de montaje, logramos
+                        convertir el espacio en un ambiente que reflejaba el propósito de Flair:
+                        comunicar sus servicios al sector alimenticio.
+                      </p>
+                    </span>
+                </div>
+        </div> 
+        
+        <div class="image-container-3">
+            <img src="00 - Fotos principales/Tapa Stand Mobil.jpg" alt="">
+            <div class="overlay"></div>
+            <div class="content">
+              <span>
+                <h2>Mobil</h2>
+                <h3> Neuquén</h3>
+                <p>Nos encargamos de todo el proceso, desde la concepción del proyecto hasta
+                  su materialización y logística. En tan solo 3 días logramos mostrar el stand, 
+                  creando un espacio que reflejaba la innovación y el compromiso de Mobil con la 
+                  industria energética.
+                </p>
+              </span>
+            </div>
+        </div>
+          
+        <div class="image-container-3">
+            <img src="00 - Fotos principales/Tapa Stand Puro Escabio.png" alt="">
+            <div class="overlay"></div>
+            <div class="content">
+              <span>
+                <h2>Puro Escabio</h2>
+                <h3> Buenos Aires </h3>
+                <p>Utilizamos herramientas de modelado 3D para dar vida a las ideas
+                  de Puro Escabio y crea un diseño efectivo. Se cuidó cada detalle, desde la 
+                  elección del piso hasta la carpintería y el diseño de la iluminación
+                </p>
+              </span>
+            </div>
+      </div>
+  </div>
+</div>
   <a href="#top" class="scroll-to-top-button">QUIERO MI STAND</a>
 
-  <div class="title">
+
+
+
+  <div class="section-4-container">
+  <div class="subtitle">
     <h2>Solicita <span class="resaltar">más información </span></h2>
-    <h3> y tené un stand para tu empresa </h3>
+   <h3>y tené un stand para tu empresa </h3> 
+  </div>
 </div>
+
 
 <div class="container">
   <div class="column left-column">
