@@ -1,37 +1,30 @@
+
 <?php
-$_POST[]
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    var_dump($_POST)
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+//informacion del formulario
     $nombre = $_POST['nombre'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
-    $mensaje = $_POST['ubicacion'];
-
-//REMITENTE (NOMBRE/APELLIDO MAIL)
-//ASUNTO
-//CUERPO
-
-var_dump ($nombre);
-mail ('phone')
+    $ubicacion = $_POST['ubicacion'];
 
 
-    // Validar los datos
-    if (!empty($nombre) && !empty($email) && !empty($mensaje)) {
-        $to = "mmpantaleon@gmail.com";
-        $subject = "Nuevo mensaje de contacto";
-        $body = "Nombre: $nombre\nEmail: $email\nPhone: $phone\nMensaje: $mensaje";
-        $headers = "From: no-reply@tudominio.com";
+// Como llega el mensaje 
+$mensaje = "Este mensaje fue enviado por" . $nombre . ",\r\n";
+$mensaje = "Su email es: " . $email . ",\r\n";
+$mensaje = "Su teléfono es: " . $phone . ",\r\n";
+$mensaje = "Vive en:" . $ubicacion . ",\r\n";
 
-        if (mail($to, $subject, $body, $headers)) {
-            echo "Mensaje enviado con éxito.";
-        } else {
-            error_log("Error al enviar el correo.");
-            echo "Error al enviar el mensaje.";
-        }
-    } else {
-        echo "Todos los campos son obligatorios.";
-    }
-} else {
-    echo "Método de solicitud no válido.";
-}
+// Definir mail de recepcion y asunto
+$destinatario = "mmpantaleon@gmail.com";
+$asunto = "Hola quiero trabajar con LAKO stands";
+
+//Funcion mail
+//a quien le llega el mail 
+mail ($destinatario, $asunto, $header);
+
+//Redireccion que se hace cuando se envia el form 
+header("Location:stands.estudiolako.com");
+
 ?>
