@@ -1,30 +1,33 @@
-
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-//informacion del formulario
-    $nombre = $_POST['nombre'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $ubicacion = $_POST['ubicacion'];
+// Información del formulario
+$nombre = $_POST['nombre'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+$ubicacion = $_POST['ubicacion'];
 
+// Construir el mensaje
+$mensaje = "Este mensaje fue enviado por " . $nombre . ",\r\n";
+$mensaje .= "Su email es: " . $email . ",\r\n";
+$mensaje .= "Su teléfono es: " . $phone . ",\r\n";
+$mensaje .= "Vive en: " . $ubicacion . ",\r\n";
 
-// Como llega el mensaje 
-$mensaje = "Este mensaje fue enviado por" . $nombre . ",\r\n";
-$mensaje = "Su email es: " . $email . ",\r\n";
-$mensaje = "Su teléfono es: " . $phone . ",\r\n";
-$mensaje = "Vive en:" . $ubicacion . ",\r\n";
-
-// Definir mail de recepcion y asunto
-$destinatario = "mmpantaleon@gmail.com";
+// Definir mail de recepción y asunto
+$destinatario = "estudio@lako.com.ar";
 $asunto = "Hola quiero trabajar con LAKO stands";
 
-//Funcion mail
-//a quien le llega el mail 
-mail ($destinatario, $asunto, $header);
+// Construir las cabeceras
+$headers = "From: " . $email . "\r\n" .
+           "Reply-To: " . $email . "\r\n" .
+           "X-Mailer: PHP/" . phpversion();
 
-//Redireccion que se hace cuando se envia el form 
-header("Location:stands.estudiolako.com");
-
-?>
+// Enviar el correo
+if (mail($destinatario, $asunto, $mensaje, $headers)) {
+    // Redirigir después de enviar el formulario
+    header("Location: stands.estudiolako.com");
+    exit();  // Asegúrate de detener el script después de la redirección
+} else {
+    echo "Error al enviar el correo.";
+}
