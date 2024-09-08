@@ -151,45 +151,48 @@ body {
           }
   
 
-          .container {
+.container {
               display: flex;
               height: calc(80vh - 100px); /* Ajusta la altura según sea necesario */
               padding-top: 50px;
               padding-bottom: 50px;
               justify-content: space-between;
               align-items: stretch; /* Cambiado a 'stretch' para asegurar que las columnas llenen la altura del contenedor */
+
+
           }
 
-          .column {
+.column {
               width: 50%;
               padding: 0px;
           }
-          .left-column img {
+.left-column img {
               width: 100%;
               height: 100%; /* Asegura que la imagen llene el alto del contenedor */
               object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin deformarse */
           }
 
-          .right-column {
+.right-column {
               display: flex; /* Cambiado para usar flexbox */
               justify-content: center; /* Centra horizontalmente */
               align-items: center; /* Centra verticalmente */
           }
 
-          .contact-form-section {
+.contact-form-section {
               background-color: #6467E3;
               padding: 20px 30px;
               width: 100%;
               height: 100%;
-              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
               display: flex; /* Cambiado para usar flexbox */
               flex-direction: column; /* Organiza el contenido en columna */
               justify-content: center; /* Centra verticalmente */
               align-items: center; /* Centra horizontalmente */
-          }
+}
 
-          .contact-form-section form {
-            width: 80%; /* Asegura que el formulario ocupe el 80% del contenedor */
+
+
+.contact-form-section form {
+            width: 90%; /* Asegura que el formulario ocupe el 80% del contenedor */
             max-width: 800px;
             display: flex;
             flex-direction: column;
@@ -197,94 +200,103 @@ body {
     
           }
 
-          .contact-info-icon {
-              height: 70px;
-              width: 70px;
-              text-align: center;
-          }
+
+.contact-info-icon {
+            height: 70px;
+            width: 70px;
+            text-align: center;
+           
+}
+
   
-          .contact-info-content {
-              margin-left: 20px;
-          }
+.contact-info-content {
+            margin-left: 20px;
+}
 
-          .contact-info-content h4 {
-              color:#28295B;
-              font-size: 21px;
-              font-family: 'Noto Sans', sans-serif;
-              margin-bottom: 5px;
-          }
+ 
 
-          .contact-info-content p {
-              color:#28295B;
-              font-size: 21px;
-              font-family: 'Noto Sans', sans-serif;
-              margin-bottom: 5px;
-          }
-
-          .contact-form-section h2 {  
-              font-size: 16px;
-              font-family: 'Noto Sans', sans-serif;
-              margin-bottom: 10px;
-              color: #333;
-          }
-
-          .input-container {
+.input-container {
             position: relative;
             width: 100%;
-            margin-top: 10px; 
-            
-  }
+            margin-top: 20px;
+}
 
-          .input-container input,
-          .input-container textarea {
-              width: 100%;
-              padding: 5px 0;
-              font-size: 16px;
-              margin: 10px 0;
-              border: none;
-              border-bottom: 2px solid #5551ff;
-              outline: none;
-              resize: none;
-          }
+.input-container input,
+.input-container textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #14152D;
+    outline: none;
+    resize: none;
+    background-color: transparent; /* Fondo blanco para los campos de entrada */
+    color: #14152D; 
+    font-family: 'Noto Sans', sans-serif;
+  
+}
 
-          .input-container span {
-              position: absolute;
-              left: 10px;
-              padding: 5px 0;
-              font-size: 12px;
-              font-family: 'Noto Sans', sans-serif;
-              margin: 10px 0;
-              pointer-events: none;
-              transition: 0.5s;
-              color: #666;
-          }
 
-          .input-container input:focus~span,
-          .input-container textarea:focus~span {
-              color: #6467e3;
-              font-size: 12px;
-          }
+.input-container span {
+  position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px 0;
+    font-size: 15px;
+    font-family: 'Noto Sans', sans-serif;
+    pointer-events: none;
+    transition: 0.3s;
+    
+}
 
-          .input-container input[type="submit"] {
-              width: 100%; /* Ajusta el ancho del botón */      
-              background: #14152D;
-              color: #FFF;
-              border: none;
-              cursor: pointer;
-              padding: 10px;
-            
-              font-size: 18px;
-              font-family: 'Noto Sans', sans-serif;
-              transition: 0.5s;
-              border-radius: 50px;
-              
-      
-  }
+.input-container input:focus~span,
+.input-container textarea:focus~span,
+.input-container input:not(:placeholder-shown)~span,
+.input-container textarea:not(:placeholder-shown)~span {
+    opacity: 0;
+    visibility: hidden;
+}
 
-          .input-container input[type="submit"]:hover {
-              background: #FFF;
-              color: #5551ff;
-          }
+
+
+
+
+.input-container input[type="submit"] {
+    width: 100%;
+    background: #14152D;
+    color:white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Noto Sans', sans-serif;
+    transition: 0.5s;
+    border-radius: 50px;
+}
+
+.input-container input[type="submit"]:hover {
+    background: #FFF;
+    color: #5551ff;
+}
+
+
+/* Estilo cuando el formulario ha sido enviado */
+#submitBtn.success {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    position: relative;
+}
+
+/* Añade un tic dentro del botón */
+#submitBtn.success::after {
+    content: "\2714"; /* Símbolo de tic */
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
           .section-container {
                       height: auto;
@@ -889,36 +901,36 @@ body {
     </div>
     <div class="column right-column">
         <div class="contact-form-section">
-
-            <form method="post" action="enviar_formulario.php";>
-              
+            <form action="enviar_formulario.php" method="post" id="contactForm">
+                
                 <div class="input-container">
-                    <input type="text" name="nombre">
-                    <span>Tu Nombre y apellido<i class="fa fa-user"></i></span>
+                    <input type="text" required name="nombre" required placeholder="">
+                    <span>Tu Nombre <i class="fa fa-user"></i></span>
                 </div>
                 
                 <div class="input-container">
-                    <input type="email" name="email">
+                    <input type="email" required name="email" required placeholder="">
                     <span>Tu mail <i class="fa fa-envelope"></i></span>
                 </div>
                 
                 <div class="input-container">
-                    <input type="phone" name="phone">
+                    <input type="tel" required name="phone" required placeholder="">
                     <span>Tu teléfono<i class="fa fa-phone"></i></span>
                 </div>
                 
                 <div class="input-container">
-                    <textarea type= "mensaje" name="ubicacion"></textarea>
+                    <input required name="mensaje" required placeholder=""></input>
                     <span>Provincia y ciudad <i class="fa fa-map"></i></span>
                 </div>
                 
                 <div class="input-container">
-                    <input type="submit" value="TRABAJEMOS JUNTOS"> 
+                    <input type="submit" value="TRABAJEMOS JUNTOS" id="submitBtn"> 
                 </div>
             </form>
         </div>
     </div>
   </div>
+  
 
   <div class="section-container">
   <div class="subtitle">
@@ -1017,7 +1029,7 @@ body {
 <div class="section-3-container"> 
 
     <div class="subtitle">
-      <h2><span class="resaltar-section-3">Stands</span> rentables</h2>
+      <h2><span class="resaltar-section-3">Stands</h2></span> 
     </div>
       <div class="row-section-3"> 
 
@@ -1092,30 +1104,30 @@ body {
   </div>
   <div class="column right-column">
       <div class="contact-form-section">
-          <form action="enviar_formulario.php" method="post">
-            
+          <form action="enviar_formulario.php" method="post" id="contactForm">
+              
               <div class="input-container">
-                  <input type="text" required name="nombre">
+                  <input type="text" required name="nombre" required placeholder="">
                   <span>Tu Nombre <i class="fa fa-user"></i></span>
               </div>
               
               <div class="input-container">
-                  <input type="email" required name="email">
+                  <input type="email" required name="email" required placeholder="">
                   <span>Tu mail <i class="fa fa-envelope"></i></span>
               </div>
               
               <div class="input-container">
-                  <input type="tel" required name="phone">
+                  <input type="tel" required name="phone" required placeholder="">
                   <span>Tu teléfono<i class="fa fa-phone"></i></span>
               </div>
               
               <div class="input-container">
-                  <textarea required name="mensaje"></textarea>
+                  <input required name="mensaje" required placeholder=""></input>
                   <span>Provincia y ciudad <i class="fa fa-map"></i></span>
               </div>
               
               <div class="input-container">
-                  <input type="submit" value="TRABAJEMOS JUNTOS"> 
+                  <input type="submit" value="TRABAJEMOS JUNTOS" id="submitBtn"> 
               </div>
           </form>
       </div>
@@ -1131,6 +1143,23 @@ body {
     </div>
   </footer>
 
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita el envío del formulario instantáneamente
+
+        // Aquí puedes agregar una validación adicional si es necesario
+        var submitBtn = document.getElementById('submitBtn');
+        
+        // Cambia el estilo del botón y añade el tic
+        submitBtn.classList.add('success');
+        submitBtn.value = 'Gracias por contactarnos!'; // Cambia el texto del botón
+
+        // Envía el formulario después de un breve retraso para mostrar el efecto
+        setTimeout(() => {
+            this.submit();
+        }, 1000);
+    });
+</script>
 
 
   </body>
