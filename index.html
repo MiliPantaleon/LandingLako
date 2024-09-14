@@ -192,12 +192,11 @@ body {
 
 
 .contact-form-section form {
-            width: 90%; /* Asegura que el formulario ocupe el 80% del contenedor */
+            width: 100%; /* Asegura que el formulario ocupe el 80% del contenedor */
             max-width: 800px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-    
           }
 
 
@@ -227,11 +226,11 @@ body {
     padding: 10px;
     font-size: 16px;
     border: none;
-    border-bottom: 2px solid #14152D;
+    border-bottom: 2px solid white;
     outline: none;
     resize: none;
-    background-color: transparent; /* Fondo blanco para los campos de entrada */
-    color: #14152D; 
+    background-color: transparent; 
+    color: white;
     font-family: 'Noto Sans', sans-serif;
   
 }
@@ -247,6 +246,7 @@ body {
     font-family: 'Noto Sans', sans-serif;
     pointer-events: none;
     transition: 0.3s;
+    color: white;
     
 }
 
@@ -256,9 +256,8 @@ body {
 .input-container textarea:not(:placeholder-shown)~span {
     opacity: 0;
     visibility: hidden;
+    transition: 0.3s ease;
 }
-
-
 
 
 
@@ -280,7 +279,6 @@ body {
     color: #5551ff;
 }
 
-
 /* Estilo cuando el formulario ha sido enviado */
 #submitBtn.success {
     background-color: #4CAF50; /* Verde */
@@ -298,48 +296,89 @@ body {
     transform: translateY(-50%);
 }
 
-          .section-container {
-                      height: auto;
-                      align-items: center;
-         
-          }
+@media only screen and (max-width: 600px)and (-webkit-min-device-pixel-ratio: 0) {
+    .contact-form-section {
+        padding: 15px;
+    }
 
-          .subtitle { 
-                      text-align: center;
-                      color: #282828;
-                      margin-top: 2px;
-                      font-size: 35px;
-                      font-family: 'Noto Sans';
-                 
-          }
+    .contact-form-section form {
+        width: 100%; /* Ocupar todo el ancho disponible */
+    }
 
-          .subtitle .resaltar {
-           
-                      font-size: 60px;
-                      color: #282828;
-          }
+    .input-container input,
+    .input-container textarea {
+        appearance: none; 
+        font-size: 14px; /* Ajuste para móviles */
+        padding: 10px;
+        box-shadow: none; /* Elimina el sombreado por defecto en los campos */
+    }
 
-          .black-and-white {
-                filter: invert(1) grayscale(1) contrast(1.5);
-          }
+    .input-container span {
+        font-size: 13px; /* Etiquetas más pequeñas para móviles */
+      
+    }
 
-          .row {
-                      display: flex; /* Usa flexbox para alinear las imágenes en fila */
-                      flex-wrap: wrap; /* Permite que las imágenes se ajusten si no caben en una línea */
-                      justify-content: center; /* Centra horizontalmente las imágenes */
-                    
-                }
-          .image-container img {
-                      width: 60%;
-                      height: auto;
-                      object-fit: contain; /* Ajusta la imagen para que se ajuste al contenedor sin deformarse */
-          }
-          .image-container {
-                      flex: 1; /* Asegura que cada imagen tenga el mismo espacio */
-                      display: flex;
-                      justify-content: center;
-                      align-items: center;
-                  }
+    .input-container input[type="submit"] {
+        width: 100%; /* Ajusta el ancho del botón */      
+    }
+
+  @media only screen and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 0) {
+  .input-container input:focus~span,
+  .input-container textarea:focus~span,
+  .input-container input:not(:placeholder-shown)~span,
+  .input-container textarea:not(:placeholder-shown)~span,
+  .input-container input:valid~span,
+  .input-container textarea:valid~span {
+      opacity: 0;
+      visibility: hidden;
+  }
+}
+}
+
+
+
+.section-container {
+              height: auto;
+              align-items: center;
+  
+  }
+
+.subtitle { 
+  text-align: center;
+  color: #282828;
+  margin-top: 2px;
+  font-size: 35px;
+  font-family: 'Noto Sans';
+
+}
+
+.subtitle .resaltar {
+
+  font-size: 60px;
+  color: #282828;
+}
+
+.black-and-white {
+filter: invert(1) grayscale(1) contrast(1.5);
+}
+
+.row {
+  display: flex; /* Usa flexbox para alinear las imágenes en fila */
+  flex-wrap: wrap; /* Permite que las imágenes se ajusten si no caben en una línea */
+  justify-content: center; /* Centra horizontalmente las imágenes */
+
+}
+.image-container img {
+  width: 60%;
+  height: auto;
+  object-fit: contain; /* Ajusta la imagen para que se ajuste al contenedor sin deformarse */
+}
+.image-container {
+  flex: 1; /* Asegura que cada imagen tenga el mismo espacio */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
@@ -356,14 +395,14 @@ body {
               justify-content: center;
               background-color:#6467E3;
               color: white;
-              padding: 40px;
+              padding: 15px;
               border-radius: 70px;
               text-decoration: none;
               font-size: 27px;
               font-family: 'Noto Sans', sans-serif;
               transition: background-color 0.3s ease;
               width: 100%; /* Asegura que el botón ocupe el 100% del ancho disponible */
-              max-width: 30%;
+              max-width: 20%;
               margin: 25px auto;
             
           }
@@ -397,6 +436,7 @@ body {
                   flex-direction: column;
                   align-items: center;
                   margin: 0px;
+                  margin-bottom: 10px;
   }
 
   .column {
@@ -409,17 +449,13 @@ body {
   }
 
 
-  .input-container input[type="submit"] {
-              width: 100%; /* Ajusta el ancho del botón */      
-          
-      
-  }
+
   }
 
   /* Responsive Styling: 1ER SECCION: Clientes que confian + scroll button */
   @media screen and (max-width: 768px) {  
   .section-container {
-                      padding: 300px 100px; /* Espaciado superior e inferior */
+                      padding: 200px 100px; /* Espaciado superior e inferior */
                       width: 100%;
                       height:auto;
                       padding-bottom: 20px;
@@ -894,32 +930,31 @@ body {
   <div class="title">
       <h2>Fabricamos y diseñamos <span class="resaltar">Stands</span></h2>
   </div>
-
   <div class="container">
     <div class="column left-column">
-        <img src="00 - Fotos principales/02 - Portada Equipo.jpg" alt="Equipo Lako ">
+        <img src="00 - Fotos principales/02 - Portada Equipo.jpg" alt="Equipo Lako">
     </div>
     <div class="column right-column">
         <div class="contact-form-section">
             <form action="enviar_formulario.php" method="post" id="contactForm">
                 
                 <div class="input-container">
-                    <input type="text" required name="nombre" required placeholder="">
+                    <input type="text" name="nombre" placeholder=" " required>
                     <span>Tu Nombre <i class="fa fa-user"></i></span>
                 </div>
                 
                 <div class="input-container">
-                    <input type="email" required name="email" required placeholder="">
+                    <input type="email" name="email" placeholder=" " required>
                     <span>Tu mail <i class="fa fa-envelope"></i></span>
                 </div>
                 
                 <div class="input-container">
-                    <input type="tel" required name="phone" required placeholder="">
-                    <span>Tu teléfono<i class="fa fa-phone"></i></span>
+                    <input type="tel" name="phone" placeholder=" " required>
+                    <span>Tu teléfono <i class="fa fa-phone"></i></span>
                 </div>
                 
                 <div class="input-container">
-                    <input required name="mensaje" required placeholder=""></input>
+                    <textarea name="mensaje" placeholder=" " required></textarea>
                     <span>Provincia y ciudad <i class="fa fa-map"></i></span>
                 </div>
                 
@@ -929,8 +964,8 @@ body {
             </form>
         </div>
     </div>
-  </div>
-  
+</div>
+
 
   <div class="section-container">
   <div class="subtitle">
@@ -1084,11 +1119,8 @@ body {
 
 <div class="container-4">
   <a href="#top" class="scroll-to-top-button">QUIERO MI STAND</a>
-  </div>
+</div>
   
-
-
-
 
   <div class="section-4-container">
   <div class="subtitle">
@@ -1100,29 +1132,29 @@ body {
 
 <div class="container">
   <div class="column left-column">
-      <img src="00 - Fotos principales/03 - Armado.jpg" alt="Equipo Lako ">
+      <img src="00 - Fotos principales/03 - Armado.jpg" alt="Equipo Lako">
   </div>
   <div class="column right-column">
       <div class="contact-form-section">
           <form action="enviar_formulario.php" method="post" id="contactForm">
               
               <div class="input-container">
-                  <input type="text" required name="nombre" required placeholder="">
+                  <input type="text" name="nombre" placeholder=" " required>
                   <span>Tu Nombre <i class="fa fa-user"></i></span>
               </div>
               
               <div class="input-container">
-                  <input type="email" required name="email" required placeholder="">
+                  <input type="email" name="email" placeholder=" " required>
                   <span>Tu mail <i class="fa fa-envelope"></i></span>
               </div>
               
               <div class="input-container">
-                  <input type="tel" required name="phone" required placeholder="">
-                  <span>Tu teléfono<i class="fa fa-phone"></i></span>
+                  <input type="tel" name="phone" placeholder=" " required>
+                  <span>Tu teléfono <i class="fa fa-phone"></i></span>
               </div>
               
               <div class="input-container">
-                  <input required name="mensaje" required placeholder=""></input>
+                  <textarea name="mensaje" placeholder=" " required></textarea>
                   <span>Provincia y ciudad <i class="fa fa-map"></i></span>
               </div>
               
@@ -1157,10 +1189,33 @@ body {
         // Envía el formulario después de un breve retraso para mostrar el efecto
         setTimeout(() => {
             this.submit();
-        }, 1000);
+        }, 2000);
     });
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const inputs = document.querySelectorAll(".input-container input, .input-container textarea");
 
-  </body>
-  </html>
+    inputs.forEach(input => {
+      input.addEventListener("input", function() {
+        if (this.value.trim() !== "") {
+          this.nextElementSibling.style.opacity = "0";
+          this.nextElementSibling.style.visibility = "hidden";
+        } else {
+          this.nextElementSibling.style.opacity = "1";
+          this.nextElementSibling.style.visibility = "visible";
+        }
+      });
+
+      // Al cargar la página, asegurarse de que las etiquetas se oculten si ya hay contenido en el campo
+      if (input.value.trim() !== "") {
+        input.nextElementSibling.style.opacity = "0";
+        input.nextElementSibling.style.visibility = "hidden";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
